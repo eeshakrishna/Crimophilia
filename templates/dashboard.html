@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Dashboard</title>
+</head>
+<header>
+<body>
+    <center>
+    <h1>Welcome</h1>
+    <br><br><br>
+    <a href="{{url_for('Books')}}">Books</a>
+    <a href="{{url_for('Documentaries')}}">Documentaries</a>
+    <a href="{{url_for('Movies')}}">Movies</a>
+    <a href="{{url_for('review')}}"> Add  Review</a>
+    <a href="{{url_for('DispRev')}}">Reviews</a>
+    <a href="{{url_for('logout')}}">Logout</a>
+    <a href="{{url_for('reviewstat')}}">reviewstat</a>
+    <br><br><br>
+    <hr>
+    <b><p>User Info</p></b><br>
+    <p>
+       Username: {{info.username}}<br>
+       Name: {{info.Fname}} {{info.Lname}}<br>
+       Age:{{info.Age}}<br>
+       Email:{{info.Email_ID}}
+    </p>
+</center>
+</body>
+</header>
+</html>

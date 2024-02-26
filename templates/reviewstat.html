@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/style4.css">
+    <title>Review Stat</title>
+</head>
+<header>
+    
+<body>
+    <center><p> CRIMOPHILIA</p></center>
+    <br><br>
+    <div>
+        <b><a>No of reviews made by each user</a></b><br>
+    <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>No</th>
+          </tr>
+          </thead>   
+          <tbody>
+           {% for row in data %}    
+                  <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                  </tr>
+              {% endfor %}
+              <hr>
+          </tbody>
+      </table>
+      
+    </div>
+    <br>
+    <div>
+        <b><a>Count of reviews</a></b><br>
+      <table>
+        <thead>
+          <tr>
+              <th>B Id</th>
+              <th>M Id</th>
+              <th>D Id</th>
+              <th>Count</th>
+          </tr>
+          </thead>    
+          <tbody>
+           {% for row in data2 %}    
+                  <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                      <td>{{row[3]}}</td>
+                  </tr>
+              {% endfor %}
+              <hr>
+          </tbody>
+      </table>
+    </div>
+    <br>
+
+    <div>
+        <b><a>Book Stats</a></b><br>
+      <table>
+        <thead>
+          <tr>
+              <th>B Id</th>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Pub Year</th>
+              <th>Pub Name</th>
+              <th>Rating</th>
+          </tr>
+          </thead>    
+          <tbody>
+           {% for row in data4 %}    
+                  <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                      <td>{{row[3]}}</td>
+                      <td>{{row[4]}}</td>
+                      <td>{{row[5]}}</td>
+                  </tr>
+                  
+              {% endfor %}
+              <hr>
+          </tbody>
+      </table>
+    </div>
+<br>
+
+
+    <div>
+        <b><a>Movie Stats</a></b><br>
+      <table>
+        <thead>
+          <tr>
+              <th>M Id</th>
+              <th>Movie Name</th>
+              <th>Director</th>
+              <th>Release Date</th>
+              <th>Rating</th>
+          </tr>
+          </thead>    
+          <tbody>
+           {% for row in data5 %}    
+                  <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                      <td>{{row[3]}}</td>
+                      <td>{{row[4]}}</td>
+                  </tr>
+                  
+              {% endfor %}
+              <hr>
+          </tbody>
+      </table>
+    </div>
+    <br>
+
+    <div>
+        <b><a>Documentary Stats</a></b><br>
+      <table>
+        <thead>
+          <tr>
+              <th>D Id</th>
+              <th>Documentary Name</th>
+              <th>Director</th>
+              <th>Release Date</th>
+              <th>Rating</th>
+          </tr>
+          </thead>    
+          <tbody>
+           {% for row in data6 %}    
+                  <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                      <td>{{row[3]}}</td>
+                      <td>{{row[4]}}</td>
+                  </tr>
+                  
+              {% endfor %}
+              <hr>
+          </tbody>
+      </table>
+    </div>
+    
+
+<br><br>
+     <center> <a href="{{url_for('dashboard')}}">Home</a></center>
+      </body>
+    </header>
+</html>
